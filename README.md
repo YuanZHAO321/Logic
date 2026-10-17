@@ -6,6 +6,21 @@
 
 | 路径 | 内容 |
 |---|---|
+| `SKILL.md` | 技能入口：触发说明（frontmatter）、五条基本立场、判别模式、论证分析流程与报告模板、速查表、脚本用法、参考文件索引、分寸 |
+| `references/foundations.md` | 基础：逻辑是什么，真假与对错，猜测、推理与推论，蕴涵关系与离断原则 |
+| `references/compound-inference.md` | 外部推论：选取推论（相容/穷尽）、条件推论（充足/必须条件）、二难式及三种破法，日常说法到符号的翻译表（补充） |
+| `references/categorical.md` | 内部推论：A/E/I/O 与词端普及、类演算与范恩图、位换、质换与轮转、对待关系的三种存在意含读法 |
+| `references/syllogism.md` | 三段式：机械检验手续、五条规律与两条补充、四格、有效式一览、日常论证整理步骤、堆垛式、省略式 |
+| `references/relations.md` | 关系：界域、逆界域、范限、反逆，九种性质及其组合，项数与对应，关系推论检查要点 |
+| `references/language.md` | 语言层面：逻辑的范围（附因明）、思想三律、语意界说九规戒、分类与归类、诡论 |
+| `references/scientific-method.md` | 科学方法：因果观念、穆勒五法、相干、类比与统计、假设六要求、证实与否证的不对称 |
+| `references/fallacies.md` | 谬误：合理与服人，型式、语意、不相干三类谬误全表，心理障碍与语言陷阱，检验速查 |
+| `references/teaching.md` | 教学：对话体教法与写作要领、二十次课程路线、练习题库（附答案）、逻辑小史与进阶书目 |
+| `scripts/categorical.py` | 定言推论检验器：三段式规律检验 + 范恩区域穷举（现代/AE/传统三种读法）与反例模型；位换、质换、换质位；对待关系表 |
+| `scripts/truth_table.py` | 真值表工具：真值表、恒真式、等值、前题能否推出结论（无效时列反例行），支持中文变量 |
+| `scripts/relations.py` | 关系性质判别：界域、逆界域、范限、反逆、九种性质与项目对应 |
+| `evals/evals.json` | 测试用例 5 则：三段式挑错、肯定后件与假二分、对话体讲位换、英文三段式与存在意含、出练习题（不打入安装包） |
+| `logic.skill` | 打包好的安装包（zip），内含 `logic/SKILL.md`、`logic/references/`、`logic/scripts/` |
 
 
 ## 逻辑 Skill：logic
@@ -37,4 +52,4 @@
 - "用对话体的方式，讲讲为什么 A 式语句不能简单换位。"
 - "出 5 道三段式练习题，附答案。"
 
-测试用例见 `skills/logic/evals/evals.json`。
+测试用例见 `evals/evals.json`。
