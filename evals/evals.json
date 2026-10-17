@@ -1,0 +1,65 @@
+{
+  "skill_name": "logic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我同事在群里说：'凡是成功的创业者都很勤奋，小王很勤奋，所以小王将来一定能创业成功。'大家都觉得有道理，我总觉得哪里不对，帮我挑挑毛病。",
+      "expected_output": "还原为三段式 AAA-2，指出共词'勤奋的人'在两前题中都未普及（共词不普及），推论无效；给出形式相同的反例；分开说明前题真假与推论对错；可提及'将来一定'是预测、属经验问题。",
+      "files": [],
+      "assertions": [
+        "把论证整理成两前题一结论的三段式，并指出共词（中词）是'勤奋的人'",
+        "判定推论无效，理由是共词在两前题中都未普及（或称中词不周延）",
+        "给出一个形式相同、前题真而结论明显假的反例",
+        "区分了前题是否为真（经验问题）与推论是否有效（逻辑问题）"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "评论员说：'如果央行提高利率，房价就会下跌。上个月房价跌了，说明央行加息了。'又说：'在这个问题上，你不是支持就是反对。'这两段话的推理各有什么问题？",
+      "expected_output": "第一段是肯定后件，条件推论中肯定后件不能肯定前件；房价下跌的充足条件不止加息。第二段是把不相容而不穷尽的选项当作穷尽（假二分），还有中立、部分支持等可能；依选取推论规律，否定其一不能肯定另一。",
+      "files": [],
+      "assertions": [
+        "指出第一段犯了肯定后件的错误，并说明后件真时前件真假不定",
+        "说明加息只是房价下跌的充足条件之一，还有其他原因可使房价下跌",
+        "指出第二段把不穷尽的选项当作穷尽（假二分），并举出第三种可能",
+        "用到相容/穷尽或充足/必须条件这类原书概念来解释"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "请用对话体的方式，给初中生讲一讲：为什么'所有的S都是P'不能倒过来说成'所有的P都是S'，那应该怎么倒才对？",
+      "expected_output": "一段对话体讲解：先凭直觉答错，用'一切尼姑是女人'之类例子揭示，再抽出形式，讲位换两条规则与普及记号〇︶，给出限量位换'有些P是S'，顺带提到E、I可简单位换、O不可位换，最后留一道练习。",
+      "files": [],
+      "assertions": [
+        "采用对话体",
+        "说明位换规则：原句未普及的词端换位后不可普及",
+        "给出A式的正确位换为'有些P是S'（限量位换）",
+        "提到O式语句不可位换，或E、I可以简单位换",
+        "包含一个让学生先答错再被纠正的转折"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Is this argument valid? 'No reptiles have fur. Some snakes are reptiles. Therefore, some snakes do not have fur.' And what if I change the second premise to 'All snakes are reptiles' and the conclusion to 'Some snakes do not have fur'?",
+      "expected_output": "The first is EIO-1 (Ferio), valid under every reading. The second is EAO-1 (Celaront), valid only if snakes are assumed to exist (existential import); invalid under the modern Boolean reading. Answer in English, optionally with the book's Chinese terms.",
+      "files": [],
+      "assertions": [
+        "Identifies the first argument as valid (EIO-1 / Ferio)",
+        "Identifies the second as EAO-1 (Celaront) and explains that its validity depends on existential import",
+        "Answers in English"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "我在准备逻辑课的小测验，帮我出 5 道判断推论对错的题，覆盖条件推论、选取推论、三段式和对待关系，每题附答案和依据的规律。",
+      "expected_output": "5 道题，覆盖四个主题，每题附有效/无效判定、依据的规律（如肯定后件、穷尽、共词普及、矛盾与反对）与简短说明。",
+      "files": [],
+      "assertions": [
+        "恰好或至少给出 5 道题",
+        "题目覆盖条件推论、选取推论、三段式、对待关系四个主题",
+        "每题都有答案与所依据的具体规律",
+        "答案正确（可用 scripts 中的工具核验）"
+      ]
+    }
+  ]
+}
